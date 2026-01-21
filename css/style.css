@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+input, button {
+  padding: 8px;
+  margin: 5px 0;
+}
+
+#expenseList li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.delete {
+  cursor: pointer;
+  color: red;
+}
+.chart-container {
+  width: 300px;   /* decrease width */
+  height: 300px;  /* decrease height */
+  margin: auto;
+}
+

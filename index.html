@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash flow</title>
+  <meta charset="UTF-8" />
+  <title>Cash Flow Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
 <body>
-    
-    <h1>something</h1>
 
-    <script src="js/index.js"></script>
+  <h1>💰 Cash-Flow Dashboard</h1>
+
+  <!-- Salary Input -->
+  <div class="card">
+    <input type="number" id="salaryInput" placeholder="Enter Total Salary" />
+    <button id="setSalaryBtn">Set Salary</button>
+    <p>Total Salary: <span id="salaryDisplay">0</span></p>
+  </div>
+
+  <!-- Expense Form -->
+  <div class="card">
+    <input type="text" id="expenseName" placeholder="Expense Name" />
+    <input type="number" id="expenseAmount" placeholder="Expense Amount" />
+    <button id="addExpenseBtn">Add Expense</button>
+  </div>
+
+  <div class="card">
+  <label>Currency:</label>
+  <select id="currencySelect">
+    <option value="INR">INR ₹</option>
+    <option value="USD">USD $</option>
+    <option value="EUR">EUR €</option>
+  </select>
+</div>
+
+  <!-- Summary -->
+  <div class="card">
+    <p>Total Expenses: <span id="totalExpense">0</span></p>
+    <p id="balanceText">
+      Remaining Balance: <span id="balance">0</span>
+    </p>
+  </div>
+
+  <!-- Expense List -->
+  <ul id="expenseList"></ul>
+
+  <!-- Chart -->
+<div class="chart-container">
+  <canvas id="expenseChart"></canvas>
+</div>
+
+  <script src="js/index.js"></script>
+  <button onclick="downloadPDF()">📄 Download Report</button>
+
 </body>
 </html>

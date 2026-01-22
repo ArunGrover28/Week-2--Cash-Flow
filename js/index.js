@@ -6,9 +6,11 @@ let expenses = [];
 
 const salaryInput = document.getElementById("salaryInput");
 const salaryDisplay = document.getElementById("salaryDisplay");
+
 const expenseName = document.getElementById("expenseName");
 const expenseAmount = document.getElementById("expenseAmount");
 const expenseList = document.getElementById("expenseList");
+
 const totalExpenseEl = document.getElementById("totalExpense");
 const balanceEl = document.getElementById("balance");
 const balanceText = document.getElementById("balanceText");
@@ -44,8 +46,6 @@ function calculateTotalExpenses() {
 }
 
 function updateUI() {
-
-  
 
   salaryDisplay.textContent = formatCurrency(salary);
   expenseList.innerHTML = "";
@@ -205,3 +205,5 @@ async function fetchExchangeRate(currency) {
 // ----------------- INIT -----------------
 loadData();
 updateUI();
+
+
